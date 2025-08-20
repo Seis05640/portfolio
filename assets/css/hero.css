@@ -1,0 +1,81 @@
+/* Hero Section Styles */
+.hero {
+  padding: 120px 0 80px;
+  text-align: center;
+  color: white;
+}
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+.subtitle {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+.description {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  opacity: 0.8;
+}
+.cta-button {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 12px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  margin: 0 0.5rem 1rem 0.5rem;
+}
+.cta-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .hero {
+    padding: 100px 0 60px;
+  }
+  .hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.8rem;
+  }
+  .subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+  }
+  .description {
+    font-size: 1rem;
+    max-width: 90%;
+    margin: 0 auto 1.5rem;
+  }
+  .cta-button {
+    display: block;
+    margin: 0.5rem auto;
+    max-width: 250px;
+    padding: 14px 24px;
+  }
+}
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .subtitle {
+    font-size: 1rem;
+  }
+  .description {
+    font-size: 0.9rem;
+  }
+  .cta-button {
+    padding: 12px 20px;
+    font-size: 0.9rem;
+  }
+}

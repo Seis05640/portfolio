@@ -1,0 +1,944 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #EC454C;
+    scrollbar-width:none;
+    box-sizing: border-box;
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 500;
+    /* scrollbar-color: #888 #f1f1f1; */
+}
+#splash{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#splash img{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    animation: blinkLogo 1s infinite;
+}
+@keyframes blinkLogo {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+.img-logo{
+    border-radius: 50%;
+    height: 100px;
+    cursor: pointer;
+    animation: blinkLogo 1s infinite;
+}
+#mainDiv{
+    height: auto;
+    width: 100%;
+    display: none;
+    align-items: center;
+    flex-direction: column;
+}
+#logo-header{
+    height: 50px;
+    width: 50px;
+    margin-left: auto;
+    border-radius: 50%;
+    animation: blinkLogo 2s infinite;
+    cursor: pointer;
+}
+#header{
+    width: 100%;
+    height: auto;
+    padding: 5px;
+    margin: 10px;
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    overflow: hidden;
+}
+#header p{
+    width: auto;
+    margin: 0;
+    font-size: 50px;
+    margin-left: 20px;
+    margin-right: auto;
+}
+#pr-hm-bt{
+    border-radius: 50%;
+    height: 50px;
+    cursor: pointer;
+    box-shadow: 2px 2px 10px #ec424b;
+}
+
+ /* Loader Styling */
+        .loader {
+            display: none; /* Initially hidden */
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            background-color: #ec424b8c;
+            position: absolute;
+            img {
+                height: 100px;
+                animation: blinkLogo 1s infinite;
+            }
+        }
+#home-nav {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.homenav {
+    width: 80%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 10px 0px;
+    cursor: pointer;
+    background-color: #cf3d44;
+}
+
+.arr-right-home-nav {
+    height: 30px;
+    margin-left: auto;
+}
+
+.homenav:hover {
+    width: 85%;
+    height: 60px;
+    transition: all 0.3s ease;
+    font-size: 20px;
+    padding-left: 100px;
+    box-shadow: 3px 3px 5px #e03f47;
+}
+
+footer {
+    text-align: center;
+    padding: 5px;
+    background-color: #cf3d44;
+    color: white; /* Ensuring text is visible */
+    margin-top: auto; /* Pushes the footer to the bottom */
+    
+    p {
+        margin: 5px;
+        font-size: 20px;
+        font-weight: 900;
+    }
+    
+    button {
+        margin: 5px;
+        padding: 8px;
+        border-radius: 5px;
+        cursor: pointer;
+        border: none;
+    }
+}
+/* Instagram Button */
+.insta-btn {
+    background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.insta-btn:hover {
+    opacity: 0.85;
+}
+
+/* Telegram Button */
+.telegram-btn {
+    background: #0088cc;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.telegram-btn:hover {
+    background: #0077b5;
+}
+
+/* YouTube Button */
+.youtube-btn {
+    background: #FF0000;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.youtube-btn:hover {
+    background: #cc0000;
+}
+
+/* WhatsApp Button */
+.whatsapp-btn {
+    background: #25D366;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.whatsapp-btn:hover {
+    background: #1ebe5d;
+}
+.homenav-lay{
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+.lay-header{
+    display: flex;
+    width: 100%;
+    padding: 5px;
+    align-items: center;
+    justify-content: start;
+    button{
+        color: white;
+        width: 100px;
+        height: 40px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        box-shadow: 5px 5px 50px #f36269;
+        background-color: #cf3d44;
+    }
+}
+.pds-main-lay {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    width: 95%;
+    max-width: 100%;
+}
+
+.pd-div{
+    height: auto;
+    width: 90%;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 2px 2px 10px #aa3d42;
+    flex: 1 1 500px; /* Grow, Shrink, and Base Width */
+    max-width: 600px;
+}
+.pds-video {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* Aspect ratio 16:9 */
+}
+.pds-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    border: none;
+}
+.btnhldr{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.buybtn{
+    height: 40px;
+    border: 1px solid white;
+    border-bottom-width: 5px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    background-color: #EC454C;
+}
+.pds-details-dv1{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.pd-details-lbl{
+    width: 100%;
+    padding: 3px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    display: flex;
+    margin: 5px;
+}
+.pd-lbl1{
+    font-size: 2rem;
+    font-weight: 800;
+}
+.viewdts-btn{
+    margin-left: auto;
+    padding: 3px 15px;
+    border: 1px solid white;
+    border-bottom-width: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 300;
+    background-color: #EC454C;
+}
+#lay-div{
+    width: 100%;
+    height: auto;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#lks-div-head{
+    width: 100%;
+    text-align: center;
+    button{
+        color: white;
+        width: 30%;
+        max-width: 200px;
+        height: 40px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        box-shadow: 5px 5px 50px #f36269;
+        background-color: #cf3d44;
+        margin: 10px;
+    }
+}
+.ff-id-lks-divs{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+#lks-bot-lay{
+    display: flex;
+}
+#lks-bot-inp-div{
+    width: 100%;
+    text-align: center;
+    input{
+        height: 40px;
+        width: 70%;
+        max-width: 300px;
+        text-align: center;
+        outline: none;
+    }
+    button{
+        height: 40px;
+        border: none;
+        padding: 10px 20px;
+        margin-left: -20px;
+        cursor: pointer;
+    }
+}
+#lks-bot-prc-lbl{
+    width: 100%;
+    height: 20px;
+    margin: 10px;
+    text-align: center;
+    img{
+        height: 20px;
+        margin-left: 5px;
+    }
+}
+#lks-bot-log-lay{
+    width: 100%;
+}
+#info-id-lay{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+#info-id-inp-div{
+        width: 100%;
+        text-align: center;
+        input{
+            height: 40px;
+            width: 70%;
+            max-width: 300px;
+            text-align: center;
+            outline: none;
+        }
+        button{
+            height: 40px;
+            border: none;
+            padding: 10px 20px;
+            margin-left: -20px;
+            cursor: pointer;
+        }
+    
+}
+
+#dlg-bx{
+    display: none; /* Initially hidden */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    height: auto;
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    background-color: #cf3d44;
+    
+    
+}
+#dlg-cls-btn{
+    padding: 5px 10px;
+        margin-bottom: 20px;
+        margin-left: auto;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+}
+.dlog-dvs {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px; /* Optional: Add padding for better spacing */
+}
+
+/* Optional: Custom scrollbar for WebKit browsers (Chrome, Edge, Safari) */
+.dlog-dvs::-webkit-scrollbar {
+    width: 6px; /* Thin scrollbar */
+}
+
+.dlog-dvs::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.3); /* Darker scrollbar thumb */
+    border-radius: 3px;
+}
+
+.dlog-dvs::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.3); /* Lighter track */
+}
+#dtls-pds-lbl{
+    font-size: 2rem;
+    font-weight: 800;
+}
+#dtls-ftrs-lbl{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+#info-id-log-lay{
+    margin-top: 20px;
+    width: 100%;
+}
+#coin-blnc-lbl-div{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:end ;
+    margin: 0px 10px;
+    margin: 10px 0px;
+    button{
+        border: none;
+        width: 70px;
+        height: 30px;
+        margin-right: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    img{
+        border-radius: 0px;
+        height: 20px;
+        margin-left: 3px;
+    }
+    p{
+        font-size: 1rem;
+    }
+}
+#payment-div{
+    height: auto;
+    margin-bottom: 100px;
+}
+#payment{
+    height: auto;
+    width: 100%;
+    display: none;
+    align-items: center;
+    flex-direction: column;
+}
+#payment-holder{
+    width: 90%;
+    max-width:600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px #aa3d42;
+}
+#p-lbl{
+    width: 100%;
+    font-size: 1.1rem;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+}
+#pay-qr-img{
+    height: auto;
+    width: 80%;
+    margin-top: 20px;
+}
+.upi-png{
+    width: 80%;
+    margin: 10px;
+    padding: 10px;
+}
+#r-p-t-h{
+    margin: 10px;
+}
+#pcancelbtn{
+    font-weight: 700;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.qr-slider {
+    position: relative;
+    width: 50%;
+    overflow: hidden;
+    min-width: 300px;
+}
+
+.qr-container {
+    display: flex; /* Arrange images in a row */
+    transition: transform 0.5s ease; /* Smooth transition */
+    width: 100%; /* Full width */
+}
+
+.qr-slide {
+    min-width: 100%; /* Each slide takes full width */
+    transition: opacity 0.5s ease; /* Fade effect */
+}
+
+.qr-slider button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(212, 17, 20, 0.9);
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1;
+    border-radius: 5px;
+}
+#p-p-lbl1{
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+    margin: 5px;
+    margin-top: 20px;
+}
+
+.prev {
+    left: -10px;
+}
+
+.next {
+    right: -10px;
+}
+#tnx-inp-div{
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+    input{
+        height: 40px;
+        width: 70%;
+        max-width: 300px;
+        text-align: center;
+        outline: none;
+    }
+    button{
+        height: 40px;
+        border: none;
+        padding: 10px 20px;
+        margin-left: -20px;
+        cursor: pointer;
+    }
+}
+#pds-type-lbl{
+    font-size: 1rem;
+}
+#lks-auto-lay{
+    display: none;
+}
+.asdasd{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+#lks-bot-coin-add-lay{
+    display: none;
+}
+.fgh{
+    justify-content: space-around;
+}
+#add-coin-lay{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    p{
+        margin-bottom: 10px;
+    }
+    img{
+        height: 20px;
+    }
+    input{
+        width: 80%;
+        height: 40px;
+        max-width: 300px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    button{
+        color: white;
+        width: 100px;
+        height: 40px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        box-shadow: 5px 5px 50px #f36269;
+        background-color: #cf3d44;
+      }
+
+    }
+    .coin1{
+        height: 40px;
+    }
+    #membership-coin-lay{
+        display: none;
+    }
+#add-coin-ggh{
+    margin-left: auto;
+    margin-right: 20px;
+}
+#prfl{
+    width: 100%;
+    height: auto;
+    display: none;
+    flex-direction: column;
+    padding: 10px;
+}
+.ggf{
+    justify-content: space-around;
+}
+#Rf-btn{
+    margin-left: auto;
+    margin-right: 20px;
+}
+#acc-details{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    p{
+        font-size: 2rem;
+        margin: 10px;
+        span{
+            font-size: 1.5rem;
+            color: rgb(51, 51, 51);
+        }
+    }
+    button{
+        width: 80%;
+        max-width: 350px;
+        cursor: pointer;
+        margin: 10px;
+        padding: 10px 10px;
+    }
+}
+#prfl-b-btn{
+    margin-right: auto;
+}
+
+#lgS-div{
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    input{
+        width: 80%;
+        max-width: 400px;
+        margin: 10px;
+        padding: 10px;
+        border-radius: 5px;
+        outline: none;
+        text-align: center;
+    }
+    button{
+        width: 70%;
+        max-width: 350px;
+        padding: 10px;
+        cursor: pointer;
+    }
+}
+#user-pds{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    button{
+        padding: 10px 10px;
+        cursor: pointer;
+        padding: 5px 10px;
+    }
+}
+.user-pds-div{
+    width: 80%;
+    background-color: #cf3d44;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin: 10px;
+    p{
+        width: 100%;
+        display: flex;
+        margin: 5px;
+        span{
+            margin-left: auto;
+            margin-right: 10px;
+            display: inline-block;
+            word-break: break-all; /* Breaks anywhere, even in the middle of words */
+            white-space: normal;
+            width: auto; /* Optional */
+            max-width: 70%;
+            text-align: end;
+            
+        }
+    }
+}
+#cng-pss-btn{
+    padding: 5px 10px;
+    margin: 10px;
+    cursor: pointer;
+}
+ /* Alert Box */
+ #customAlert {
+    position: fixed;
+    bottom: -100px; /* Start hidden below the screen */
+    left: 50%;
+    transform: translateX(-50%);
+    background: #333;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+    opacity: 0;  /* Start invisible */
+    transition: bottom 0.5s ease-in-out, opacity 0.5s;
+    min-width: 250px;
+    text-align: center;
+}
+
+/* Show Alert */
+.show {
+    bottom: 30px;  /* Slide up */
+    opacity: 1;    /* Make visible */
+}
+
+/* Close Button */
+.close-btn {
+    background: red;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+#snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 12px;
+    position: fixed;
+    left: 50%;
+    bottom: 150px;
+    transform: translateX(-50%);
+    border-radius: 4px;
+    z-index: 1000;
+}
+#snackbar.show {
+    visibility: visible;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+@keyframes fadein {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+@keyframes fadeout {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+#lks-log-lay{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.logs-card{
+    background-color: #cf3d44;
+    box-shadow: 5px 5px 50px #f36269;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    width: 90%;
+    max-width: 1000px;
+    border-radius: 5px;
+    padding: 5px;
+    p{
+        width: 100%;
+        display: flex;
+        margin: 5px;
+    }
+    span{
+        margin-left: auto;
+    }
+    .log-nme-lbl{
+        font-size: 2rem;
+        span{
+            font-size: 1.5rem;
+        }
+    }
+}
+#region-select{
+    height: 40px;
+    padding: 0px 5px;
+}
+.loading-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    pointer-events: all;
+  }
+
+  .loading-content {
+    text-align: center;
+    color: #fff;
+  }
+
+  .cool-spinner {
+    width: 64px;
+    height: 64px;
+    border: 6px solid rgba(255, 255, 255, 0.2);
+    border-top-color: var(--primary);
+    border-radius: 50%;
+    animation: spin 1s ease-in-out infinite;
+    box-shadow: 0 0 15px var(--primary-light);
+    margin: 0 auto 12px;
+  }
+
+  .loading-text {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-shadow: 0 0 5px var(--primary-light);
+  }
+
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  .select-12311{
+    height: 40px;
+  }
+  .payment-methods-holder{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    button{
+        padding: 10px 0px;
+        border-radius: 5px;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        margin: 5px;
+    }
+  }
+  .crypto-div{
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+
+}
+.active-p-meth{
+    border-bottom: 10px solid #EC454C;
+}

@@ -1,0 +1,59 @@
+/* Main Global Styles and Imports */
+@import url('navbar.css');
+@import url('footer.css');
+@import url('about.css');
+@import url('skills.css');
+@import url('projects.css');
+@import url('darkmode.css');
+@import url('contact.css');
+@import url('certifications.css');
+@import url('hero.css');
+@import url('education.css');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  line-height: 1.6;
+  color: #333;
+  transition: all 0.3s ease;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* Global Mobile Responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
+  .section {
+    padding: 60px 0;
+  }
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+@media (max-width: 480px) {
+  .container {
+    padding: 0 10px;
+  }
+  .section {
+    padding: 40px 0;
+  }
+  .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+}
